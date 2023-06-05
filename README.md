@@ -6,7 +6,7 @@ This workflow is consists of 8 steps for the processing of high-resolution mass 
 ## Step 1: Begin by clearing the workspace and installing required R packages
 
 ## Step 2: Upload required data into working directory
-### long reports (excel), mxXML files, and a database of in-silico predicted fragments (excel) files are needed
+long reports (excel), mxXML files, and a database of in-silico predicted fragments (excel) files are needed
 
 ## Step 3: Define functions used for organizing MS2 data and long reports with sample names
 
