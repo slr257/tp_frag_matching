@@ -262,23 +262,23 @@ for(x in 1:length(rownames(sam.df))){
 } # end tp for-loop (x index)
 
 
-#### Export results as csv files
+#### 7. Export results as csv files --------------------------------------------
 
 # peak areas of TPs by sample name
-write.csv(sam.df, "sample.df.EFF_221012_posfrag.csv")
+write.csv(sam.df, "sample.df.csv")
 
-# TRUE/FALSE OF MATCHING FRAGMENTS
-write.csv(frags.df, "frags.df.EFF_221012_posfrag.csv")
-write.csv(matching.frags.val, "matching.fragments.EFF_ALL_221012_posfrag.csv")
+# TRUE/FALSE of samples with matching fragments
+write.csv(frags.df, "frags.df.csv")
+
+# mass of most intense matching fragment
+write.csv(matching.frags.val, "matching.fragments.csv")
 
 
-
-######################## EXPORTING RESULTS INTO AN EXCEL SHEET #######################
-
+#### 8. Export results as a formatted Excel Workbook --------------------------------------------
 
 # exporting data
 wb <- createWorkbook(type="xlsx")
-sheet1 <- createSheet(wb, sheetName = "Data")
+sheet1 <- createSheet(wb, sheetName = "Peak Area")
 sheet2 <- createSheet(wb, sheetName = "Fragments_Boolean")
 sheet3 <- createSheet(wb, sheetName = "Diagnostic Fragments")
 #sheet4 <- createSheet(wb, sheetName = "KEY")
@@ -382,12 +382,8 @@ setColumnWidth(sheet2, colIndex = c(1:9), colWidth = 20)
 setColumnWidth(sheet2, colIndex = c(1,6), colWidth = 35)
 
 
-file.output <- "Fragment_Results_EFF_ALL_221012"
-#saveWorkbook(wb, "Fragment_Results_EFF_version220920_middle.xlsx")
+file.output <- "Fragment_Results_Excel"
 saveWorkbook(wb, paste0(file.path,"/",file.output,".xlsx"))
 
-
-
-
-
+### END ####
 
