@@ -31,6 +31,8 @@ library(xlsx)
 #### 2. Upload required data into working directory --------------------------------------------
 
 # Create a folder titled "mzXML", add it to the working directory, and input the address here
+
+# Note: mzMXL files for this project are publically available for download here - doi: 10.25345/C5SQ8QT49
 file.path <- "C:/Users/Desktop/repos/tp_frag_matching"
 
 # Create a folder containing "long reports" containing peak area information in the format exported from XCalibur QuanBrowser
