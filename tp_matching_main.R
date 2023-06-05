@@ -7,7 +7,7 @@
 rm(list = ls())
 
 # set working directory
-setwd("C:/Users/slr257/Desktop/repos/tp_frag_matching")
+setwd("~Desktop/repos/tp_frag_matching")
 
 # install and load necessary packages
 library(mzR)
@@ -31,10 +31,10 @@ library(xlsx)
 #### 2. Upload required data into working directory --------------------------------------------
 
 # Create a folder titled "mzXML", add it to the working directory, and input the address here
-file.path <- "C:/Users/slr257/Documents/Nov2020_Project2/Suspect Screening/SimpleMS2Matching"
+file.path <- "C:/Users/Desktop/repos/tp_frag_matching"
 
 # Create a folder containing "long reports" containing peak area information in the format exported from XCalibur QuanBrowser
-file.path.long <- "C:/Users/slr257/Documents/Nov2020_Project2/Suspect Screening/SimpleMS2Matching/Long_Reports"
+file.path.long <- "C:/Users/Desktop/repos/tp_frag_matching/Long_Reports"
 
 # Add multiple long report names and specific the number of long reports
 n <- 7
@@ -49,7 +49,7 @@ file.name6 <- "EFF_suspectscreening_Cluster6_long"
 file.name7 <- "EFF_suspectscreening_Cluster7_long"
 
 # Set "Database" file path to excel sheet containing information on in-silico predicted fragments
-database.path <- "C:/Users/slr257/Documents/Nov2020_Project2/Suspect Screening/SimpleMS2Matching/Nov2020_TP_Database_SR_All_Frags_221006.xlsx"
+database.path <- "C:/Users/Desktop/repos/tp_frag_matching/TP_Database_All_Frags.xlsx"
 
 # Load database
 database <- as.data.frame(read_excel(database.path, sheet = 1))
